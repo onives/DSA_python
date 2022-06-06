@@ -10,6 +10,7 @@ graph = {
     "f": []
 }
 
+
 def depth_first_search(graph, source):
     stack = deque()
     stack.append(source)
@@ -18,6 +19,7 @@ def depth_first_search(graph, source):
         print(current_node)
         for neighbor in graph[current_node]:
             stack.append(neighbor)
+
 
 print("DFS")
 depth_first_search(graph, "a")
@@ -31,6 +33,7 @@ def breadth_first_search(graph, source):
         print(current_node)
         for neighbor in graph[current_node]:
             queue.appendleft(neighbor)
+
 
 print("BFS")
 breadth_first_search(graph, "a")
